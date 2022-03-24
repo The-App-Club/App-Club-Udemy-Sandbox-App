@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "format": "prettier --write \"{,!(node_modules|dist|build)/**/}*.*\"",
+    "delete-function": "node -r esm deleteFunction.js",
+    "delete-index": "node -r esm deleteIndex.js",
+    "delete-collection": "node -r esm deleteCollection.js",
+    "create-collection": "node -r esm createCollection.js",
+    "create-document": "node -r esm createDocumnet.js",
+    "retrieve-document-list": "node -r esm getDocumnetList.js",
+    "create-index": "node -r esm createIndex.js",
+    "retrieve-document-list-with-index": "node -r esm getDocumnetListWithIndex.js",
+    "create-binding-index": "node -r esm createBindingIndex.js",
+    "retrieve-document-list-with-binding-index": "node -r esm getDocumnetListWithBindingIndex.js",
+    "create-function": "node -r esm createFunction.js",
+    "execute-function": "node -r esm executeFunction.js",
+    "clean": "npm-run-all -s delete-index delete-collection delete-function",
+    "reproduce": "npm-run-all -s create-collection create-document create-index create-binding-index create-function"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "esm": "^3.2.25",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.0"
+  },
+  "dependencies": {
+    "faunadb": "^4.5.2"
+  }
+}
