@@ -1,7 +1,7 @@
 name = "basic-fauna-fql-search"
 type = "javascript"
 zone_id = ""
-account_id = "5076594ccd002b036ddbca7d88797283"
+account_id = "YOUR_ACCOUNT_ID"
 route = ""
 workers_dev = true
 compatibility_date = "2021-12-26"
