@@ -5,6 +5,7 @@ const clean = () => {
       await client.query(q.Delete(q.Index('all_Rss_by_title')));
       await client.query(q.Delete(q.Index('all_Rss_by_title_split')));
       await client.query(q.Delete(q.Collection('Rss')));
+      await client.query(q.Delete(q.Function('UpdateCategory')));
       resolve();
     } catch (error) {
       reject(error);
