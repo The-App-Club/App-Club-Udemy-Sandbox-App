@@ -25,6 +25,7 @@ $ curl -sL 'http://127.0.0.1:8787/?searchTerm=React' | jq
 ## Deploy
 
 ```bash
+$ time wrangler publish
 ✨  Build completed successfully!
 ✨  Successfully published your script to
  https://basic-fauna-fql-search.app-club.workers.dev
