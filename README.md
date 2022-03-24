@@ -1,1 +1,1 @@
-# App-Club-Udemy-Sandbox-App
+# udemy-fauna-rss-curation
