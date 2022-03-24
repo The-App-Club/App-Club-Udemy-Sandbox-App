@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "format": "prettier --write \"{,!(node_modules|dist|build)/**/}*.*\""
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "esm": "^3.2.25",
+    "prettier": "^2.3.0"
+  }
+}
