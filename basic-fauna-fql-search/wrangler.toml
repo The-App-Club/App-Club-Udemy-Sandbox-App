@@ -1,0 +1,12 @@
+name = "basic-fauna-fql-search"
+type = "javascript"
+zone_id = ""
+account_id = "5076594ccd002b036ddbca7d88797283"
+route = ""
+workers_dev = true
+compatibility_date = "2021-12-26"
+
+[build]
+command = "yarn install && yarn build"
+[build.upload]
+format = "service-worker"
