@@ -11,6 +11,7 @@
     "retrieve-document-list-with-index": "node -r esm getDocumnetListWithIndex.js",
     "create-binding-index": "node -r esm createBindingIndex.js",
     "retrieve-document-list-with-binding-index": "node -r esm getDocumnetListWithBindingIndex.js",
+    "update-document": "node -r esm updateDocument.js",
     "create-function": "node -r esm createFunction.js",
     "execute-function": "node -r esm executeFunction.js",
     "clean": "npm-run-all -s delete-index delete-collection delete-function",

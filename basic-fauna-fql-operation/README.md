@@ -23,6 +23,8 @@ $ time yarn create-binding-index
 
 $ time yarn retrieve-document-list-with-binding-index
 
+$ time yarn update-document
+
 $ time yarn create-function
 
 $ time yarn execute-function
@@ -38,6 +40,8 @@ $ time yarn retrieve-document-list
 $ time yarn retrieve-document-list-with-index
 
 $ time yarn retrieve-document-list-with-binding-index
+
+$ time yarn update-document
 
 $ time yarn execute-function
 ```
