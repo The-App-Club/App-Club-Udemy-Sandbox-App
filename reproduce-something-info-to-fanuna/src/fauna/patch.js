@@ -30,6 +30,22 @@ const patch = () => {
           )
         )
       );
+      await client.query(
+        q.Map(
+          q.Paginate(q.Documents(q.Collection('Rss'))),
+          q.Lambda(
+            'X',
+            q.Update(q.Select(['ref'], q.Get(q.Var('X'))), {
+              data: {
+                categories: q.Map(
+                  q.Select(['data', 'categories'], q.Get(q.Var('X'))),
+                  q.Lambda('category', q.LowerCase(q.Var('category')))
+                ),
+              },
+            })
+          )
+        )
+      );
       resolve();
     } catch (error) {
       reject(error);
