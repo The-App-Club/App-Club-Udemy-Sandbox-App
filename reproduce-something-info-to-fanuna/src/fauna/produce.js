@@ -85,7 +85,7 @@ const produce = () => {
                 q.Paginate(
                   q.Match(
                     q.Index('all_Rss_by_title_split'),
-                    q.LowerCase(q.Var('categoryName'))
+                    q.Var('categoryName')
                   )
                 ),
                 q.Lambda(
