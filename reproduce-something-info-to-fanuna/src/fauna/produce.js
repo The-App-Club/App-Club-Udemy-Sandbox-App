@@ -1,5 +1,15 @@
 import { client, q } from './config';
 
+const uniq = (itemInfoList) => {
+  return [
+    ...new Map(
+      itemInfoList.map((itemInfo) => {
+        return [itemInfo.title, itemInfo];
+      })
+    ).values(),
+  ];
+};
+
 function Split(str, sep) {
   return q.Map(
     q.FindStrRegex(str, q.Concat(['[^\\', sep, ']+'])),
@@ -19,11 +29,13 @@ const produce = () => {
         )
       );
 
-      const rssInfoList = data
-        .map((item) => {
-          return item.data.rssInfoList;
-        })
-        .flat();
+      const rssInfoList = uniq(
+        data
+          .map((item) => {
+            return item.data.rssInfoList;
+          })
+          .flat()
+      );
 
       await client.query(
         q.Map(
