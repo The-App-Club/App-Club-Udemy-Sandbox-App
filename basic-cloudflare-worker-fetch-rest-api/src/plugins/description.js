@@ -14,7 +14,7 @@ const getDescription = ({ item }) => {
   if (domText) {
     const $ = cheerio.load(domText);
     if ($(`p`).text()) {
-      return defaultDescription;
+      return $(`p`).text();
     }
     return defaultDescription;
   }
