@@ -1,5 +1,8 @@
 import { client, q } from './config';
 
+// https://docs.fauna.com/fauna/current/api/fql/functions/lowercase?lang=javascript
+// https://docs.fauna.com/fauna/current/api/fql/functions/createfunction?lang=javascript
+
 (async () => {
   try {
     let response;
