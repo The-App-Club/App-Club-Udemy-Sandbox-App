@@ -4,6 +4,7 @@
     "delete-function": "node -r esm deleteFunction.js",
     "delete-index": "node -r esm deleteIndex.js",
     "delete-collection": "node -r esm deleteCollection.js",
+    "delete-document": "node -r esm deleteDocument.js",
     "create-collection": "node -r esm createCollection.js",
     "create-document": "node -r esm createDocumnet.js",
     "retrieve-document-list": "node -r esm getDocumnetList.js",
