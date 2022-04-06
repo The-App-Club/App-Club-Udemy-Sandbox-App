@@ -1,5 +1,9 @@
 import { client, q } from './config';
 // https://fauna.com/blog/applying-test-driven-development-to-your-database
+// https://docs.fauna.com/fauna/current/api/fql/functions/findstrregex?lang=javascript
+// https://docs.fauna.com/fauna/current/api/fql/functions/concat?lang=javascript
+// https://docs.fauna.com/fauna/current/api/fql/functions/select?lang=javascript
+// https://stedolan.github.io/jq/manual/ path(path_expression)
 
 function Split(str, sep) {
   return q.Map(
