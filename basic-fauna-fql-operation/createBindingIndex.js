@@ -1,4 +1,7 @@
 import { client, q } from './config';
+
+// https://docs.fauna.com/fauna/current/learn/tutorials/fql/indexes/bindings
+
 // https://fauna.com/blog/applying-test-driven-development-to-your-database
 // https://docs.fauna.com/fauna/current/api/fql/functions/findstrregex?lang=javascript
 // https://docs.fauna.com/fauna/current/api/fql/functions/concat?lang=javascript
