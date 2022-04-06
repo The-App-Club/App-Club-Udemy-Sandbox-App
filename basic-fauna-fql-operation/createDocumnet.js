@@ -1,5 +1,8 @@
 import { client, q } from './config';
 
+// https://docs.fauna.com/fauna/current/api/fql/functions/lambda?lang=javascript
+// https://docs.fauna.com/fauna/current/learn/tutorials/fql/crud?lang=javascript#post
+
 const uniq = (itemInfoList) => {
   return [
     ...new Map(
