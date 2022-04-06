@@ -1,5 +1,11 @@
 import { client, q } from './config';
 
+// https://docs.fauna.com/fauna/v3/api/fql/functions/merge?lang=javascript
+// https://docs.fauna.com/fauna/v3/api/fql/functions/distinct?lang=javascript
+// https://docs.fauna.com/fauna/v3/api/fql/functions/append?lang=javascript
+// https://docs.fauna.com/fauna/v3/api/fql/functions/update?lang=javascript
+// https://docs.fauna.com/fauna/v3/api/fql/functions/select?lang=javascript
+
 (async () => {
   try {
     let response;
