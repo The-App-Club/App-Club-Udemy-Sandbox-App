@@ -1,5 +1,7 @@
 import { client, q } from './config';
 
+// https://docs.fauna.com/fauna/current/learn/tutorials/fql/indexes/search
+
 (async () => {
   try {
     let response;
