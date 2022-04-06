@@ -1,5 +1,6 @@
 import { client, q } from './config';
 
+// https://docs.fauna.com/fauna/current/api/fql/functions/createcollection?lang=javascript
 (async () => {
   try {
     let response;
