@@ -3,9 +3,32 @@ import { client, q } from './config';
 // https://docs.fauna.com/fauna/current/api/fql/functions/exists?lang=javascript
 // https://docs.fauna.com/fauna/current/api/fql/functions/if?lang=javascript
 
+// Bounus
+const deleteAllCollections = async () => {
+  return await client.query(
+    q.Map(q.Paginate(q.Collections()), q.Lambda('ref', q.Delete(q.Var('ref'))))
+  );
+};
+
+const deleteAllFunctions = async () => {
+  return await client.query(
+    q.Map(q.Paginate(q.Functions()), q.Lambda('ref', q.Delete(q.Var('ref'))))
+  );
+};
+
+const deleteIndexes = async () => {
+  return await client.query(
+    q.Map(q.Paginate(q.Indexes()), q.Lambda('ref', q.Delete(q.Var('ref'))))
+  );
+};
+
 const clean = () => {
   return new Promise(async (resolve, reject) => {
     try {
+      // await deleteAllCollections()
+      // await deleteAllFunctions();
+      // await deleteIndexes();
+
       await client.query(
         q.If(
           q.Exists(q.Index('all_Rss_by_title')),
@@ -17,6 +40,13 @@ const clean = () => {
         q.If(
           q.Exists(q.Index('all_Rss_by_categories')),
           q.Delete(q.Index('all_Rss_by_categories')),
+          'not exists, not delete'
+        )
+      );
+      await client.query(
+        q.If(
+          q.Exists(q.Index('all_Rss_by_title_split')),
+          q.Delete(q.Index('all_Rss_by_title_split')),
           'not exists, not delete'
         )
       );
