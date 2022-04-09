@@ -1,7 +1,7 @@
 import { Router } from 'itty-router';
 
-import Posts from './handlers/posts';
-import Post from './handlers/post';
+import { Posts } from './handlers/posts';
+import { Post } from './handlers/post';
 
 const router = Router();
 

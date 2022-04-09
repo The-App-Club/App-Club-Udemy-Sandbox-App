@@ -1,10 +1,10 @@
-import Store from '../posts_store';
+import { PostsStore as Store } from '../posts_store';
 
-const Post = async (request) => {
+const Post = (request) => {
   const posts = new Store();
   const postId = request.params.id;
 
-  const body = JSON.stringify(await posts.find(postId));
+  const body = JSON.stringify(posts.find({ id: postId }));
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Content-type': 'application/json',
@@ -12,4 +12,4 @@ const Post = async (request) => {
   return new Response(body, { headers });
 };
 
-export default Post;
+export { Post };

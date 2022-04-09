@@ -1,4 +1,4 @@
-const _posts = [
+const itemInfoList = [
   {
     id: 1,
     title: 'My first blog post',
@@ -13,12 +13,16 @@ const _posts = [
   },
 ];
 
-export default class PostsStore {
-  async all() {
-    return _posts;
+class PostsStore {
+  all() {
+    return itemInfoList;
   }
 
-  async find(id) {
-    return _posts.find((post) => post.id.toString() === id.toString());
+  find({ id }) {
+    return itemInfoList.find((itemInfo) => {
+      return itemInfo.id.toString() === id.toString();
+    });
   }
 }
+
+export { PostsStore };
