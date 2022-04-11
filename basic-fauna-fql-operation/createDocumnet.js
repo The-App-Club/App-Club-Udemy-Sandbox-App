@@ -8,11 +8,11 @@ import { client, q } from './config';
 // https://docs.fauna.com/fauna/current/api/fql/functions/var?lang=javascript
 // https://docs.fauna.com/fauna/current/api/fql/functions/create?lang=javascript
 
-const uniq = (itemInfoList) => {
+const uniq = (itemInfoList, keyName) => {
   return [
     ...new Map(
       itemInfoList.map((itemInfo) => {
-        return [itemInfo.title, itemInfo];
+        return [itemInfo[keyName], itemInfo];
       })
     ).values(),
   ];
@@ -32,7 +32,8 @@ const uniq = (itemInfoList) => {
         .map((item) => {
           return item.data.rssInfoList;
         })
-        .flat()
+        .flat(),
+      'title'
     );
     response = await client.query(
       q.Map(
