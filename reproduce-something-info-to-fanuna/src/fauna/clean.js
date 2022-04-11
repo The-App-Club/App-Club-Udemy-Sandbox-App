@@ -16,7 +16,7 @@ const deleteAllFunctions = async () => {
   );
 };
 
-const deleteIndexes = async () => {
+const deleteAllIndexes = async () => {
   return await client.query(
     q.Map(q.Paginate(q.Indexes()), q.Lambda('ref', q.Delete(q.Var('ref'))))
   );
@@ -27,7 +27,7 @@ const clean = () => {
     try {
       // await deleteAllCollections()
       // await deleteAllFunctions();
-      // await deleteIndexes();
+      // await deleteAllIndexes();
 
       await client.query(
         q.If(
