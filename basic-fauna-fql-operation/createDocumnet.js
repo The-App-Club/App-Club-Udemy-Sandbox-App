@@ -1,7 +1,12 @@
 import { client, q } from './config';
 
 // https://docs.fauna.com/fauna/current/api/fql/functions/lambda?lang=javascript
-// https://docs.fauna.com/fauna/current/learn/tutorials/fql/crud?lang=javascript#post
+// https://docs.fauna.com/fauna/current/api/fql/functions/map?lang=javascript
+// https://docs.fauna.com/fauna/current/api/fql/functions/paginate?lang=javascript
+// https://docs.fauna.com/fauna/current/api/fql/functions/get?lang=javascript
+// https://docs.fauna.com/fauna/current/learn/understanding/documents?lang=javascript
+// https://docs.fauna.com/fauna/current/api/fql/functions/var?lang=javascript
+// https://docs.fauna.com/fauna/current/api/fql/functions/create?lang=javascript
 
 const uniq = (itemInfoList) => {
   return [
