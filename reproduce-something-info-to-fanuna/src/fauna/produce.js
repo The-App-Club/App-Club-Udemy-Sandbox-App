@@ -96,7 +96,16 @@ const produce = () => {
                       data: {
                         categories: q.Distinct(
                           q.Append(
-                            q.Select(['data', 'categories'], q.Get(q.Var('X'))),
+                            q.Map(
+                              q.Select(
+                                ['data', 'categories'],
+                                q.Get(q.Var('X'))
+                              ),
+                              q.Lambda(
+                                'category',
+                                q.LowerCase(q.Var('category'))
+                              )
+                            ),
                             [q.LowerCase(q.Var('categoryName'))]
                           )
                         ),
