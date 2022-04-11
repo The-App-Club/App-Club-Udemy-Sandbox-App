@@ -1,6 +1,7 @@
 import { client, q } from './config';
 
 // https://docs.fauna.com/fauna/current/learn/tutorials/fql/indexes/search
+// https://docs.fauna.com/fauna/current/api/fql/functions/createindex?lang=javascript
 
 (async () => {
   try {
